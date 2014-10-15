@@ -1,6 +1,7 @@
 ## Kinesis Om Consumer Template
 
 This is a template that combines Scala and Clojurescript with OM to consume an AWS Kinesis stream.
+It assumes that the messages pushed onto Kinesis are in `JSON` format.
 
 In Scala it is using Play 2.3.x and the Amazon Kinesis Client Library, with very basic checkpointing.
 
