@@ -7,6 +7,15 @@ In Scala it is using Play 2.3.x and the Amazon Kinesis Client Library, with very
 
 In Clojurescript, the updates are put inside a ReactJS class/component using OM which is fed live via EventSource/Server-sent events.
 
+### Setup
+Fill out the missing fields inside `ConsumerSettings`;
+ - `accessKey` and `secretKey` with access to the given `Kinesis` stream AND `DynamoDB`
+ - `streamName` for the stream to pull updates from
+
+Make sure `region` is set correctly.
+
+The Kinesis Client Library uses DynamoDB to store which shard-id it is currently consuming, and for other reasons, like load balancing with different servers. The `applicationName` is what your DynamoDB table will be called.
+
 ### Running
 
 To run, please install both `sbt` and `leiningen`.
