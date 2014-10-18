@@ -37,9 +37,7 @@ object KinesisConsumer {
 }
 
 object RecordProcessorFactory extends IRecordProcessorFactory {
-  val recordProcessor = new RecordProcessor
-
-  override def createProcessor: IRecordProcessor = recordProcessor
+  override def createProcessor: IRecordProcessor = new RecordProcessor
 }
 
 
